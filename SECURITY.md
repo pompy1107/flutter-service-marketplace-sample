@@ -1,13 +1,7 @@
-# Security note
+# Security notes
 
-This repository is a sanitized portfolio snapshot derived from a production application.
+This repository is a sanitized portfolio copy of a production application.
 
-Production API keys, Apple private keys, signing credentials, Firebase configuration files, user exports, tokens and production-only infrastructure configuration are intentionally excluded.
+Production credentials and customer data are deliberately excluded. Never commit real `.env` files, Firebase production configuration, `google-services.json`, `GoogleService-Info.plist`, Apple `.p8` private keys, Android signing keystores, Stripe secret/webhook keys, service-account files, or exports containing user records/password hashes/tokens.
 
-The repository must never contain:
-- `users.json` or other user exports
-- Apple `.p8` private keys
-- Android signing keys / `key.properties`
-- Firebase service-account credentials
-- production `.env` files
-- live Stripe secrets or webhook secrets
+The sample uses placeholder or environment-based configuration. Anyone running it must provide their own Firebase, Google Maps and payment configuration.
