@@ -1,28 +1,45 @@
 # Flutter Service Marketplace — Production Architecture Sample
 
-Sanitized portfolio snapshot based on a real production service marketplace built with Flutter, Firebase and Cloud Functions.
+Sanitized portfolio version of a production Flutter marketplace application for local services.
 
-## What this repository demonstrates
+This repository is derived from a real production codebase and is intended to demonstrate architecture, workflow design and implementation patterns without exposing production credentials, customer data or signing material.
 
-- Multi-role client / professional workflows
-- Job lifecycle and status management
-- Quote / offer flows
-- Real-time chat and unread-state handling
-- Firebase Authentication, Firestore and Storage architecture
-- Push and local notification patterns
-- Multi-country configuration for Romania and the United Kingdom
-- Multi-currency support (RON / GBP)
-- Stripe Connect integration patterns using server-side secrets
-- Localization and scalable service-layer structure
+## What this sample demonstrates
 
-## Security
+- Flutter multi-role app architecture (Client / Professional / Admin)
+- Firebase Authentication and Firestore integration
+- Role-aware onboarding and profile completion flows
+- Job lifecycle and marketplace workflow
+- Quotes / offers
+- Real-time chat and unread counters
+- Push and local notification architecture
+- Multi-country / multi-currency support (RO / UK)
+- Localization (Romanian / English)
+- Google Maps / geocoding integration via environment-based configuration
+- Stripe Connect backend patterns using Firebase secret management
+- Firebase Cloud Functions
 
-This is intentionally **not** a deployable production clone. Production credentials, customer data and infrastructure secrets have been removed or replaced with placeholders.
+## Security / sanitization
 
-Excluded examples include Apple private keys, Firebase production config files, user exports, signing credentials and live payment secrets.
+The public repository intentionally excludes or replaces:
 
-See `SECURITY.md` and `.env.example`.
+- production Firebase configuration
+- Google API keys
+- Apple private signing/auth keys
+- user exports and password hashes
+- production webhook/Stripe secrets
+- production-only service URLs and identifiers
+- signing keystores and certificates
+- large production datasets and store/build artifacts
 
-## Stack
+See `SECURITY.md` and `.env.example` for details.
 
-Flutter / Dart · Firebase Auth · Cloud Firestore · Firebase Storage · Cloud Functions · FCM · Google Maps · Stripe Connect
+## Configuration
+
+Provide your own Firebase / Google configuration through environment values or local platform configuration. Never commit production credentials.
+
+Example values are documented in `.env.example`.
+
+## Note
+
+Some production-only assets, datasets and infrastructure configuration are deliberately omitted. The goal of this repository is to show real application architecture and implementation while keeping the production system isolated.
