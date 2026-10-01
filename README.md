@@ -4,6 +4,10 @@ Sanitized portfolio version of a production Flutter marketplace application for 
 
 This repository is derived from a real production codebase and demonstrates architecture, workflow design and implementation patterns without exposing production credentials, customer data or signing material.
 
+## Live production app
+- Google Play: https://play.google.com/store/apps/details?id=ro.tudorix.handygo
+- App Store: https://apps.apple.com/ro/app/handygo-services/id6775043868
+
 ## What this sample demonstrates
 - Flutter multi-role app architecture (Client / Professional / Admin)
 - Firebase Authentication and Firestore integration
